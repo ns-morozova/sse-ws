@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.hidden {
+    display: none;
+}
+
+.cont-author {
+    position: relative;
+    height: 100vh;
+    background-color: rgb(165, 165, 165);
+    padding: 50px;
+}
+
+.form-author {
+    width: auto;
+    margin: 0 auto;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    border: 1px black solid;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgb(238, 238, 238);
+}
+
+.cont-chat {
+    position: relative;
+}
+
+.cont-shared {
+    width: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.users {
+    max-width: 100px;
+    height: auto;
+    padding: 10px;
+    background-color: rgb(208, 234, 255);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 3px;
+    box-shadow: inset 0 0 10px rgb(1, 78, 138);
+    box-sizing: border-box;
+    margin-top: 20px;    
+}
+
+.user {
+    padding: 10px;
+    border: 1px rgb(1, 78, 138) solid;
+    border-radius: 3px; 
+}
+
+.form-chat {
+    max-width: 600px;
+    min-width: 560px;
+    background-color: rgb(208, 234, 255);
+    border-radius: 3px;
+    box-shadow: 0 0 8px 2px rgb(1, 78, 138);
+}
+
+.chat {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.messages {
+    max-height: 600px;
+    margin-bottom: 15px;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 3px;
+    box-shadow: inset 0 0 10px rgb(1, 78, 138);
+    box-sizing: border-box;
+    height: 100%;
+    width: 96%;
+    margin: 10px auto 0;
+}
+
+.message {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.message-left {
+    align-items: flex-start;
+  }
+  
+.message-right {
+    align-items: flex-end;
+    text-align: end;
+  }
+
+.mess-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 250px;
+    min-width: 230px;
+    border: 1px rgb(1, 78, 138) solid;
+    border-radius: 3px;
+    margin: 10px 10px 0 10px;
+    background-color: rgb(231, 231, 231);
+}
+
+.info-mess {
+    padding: 4px;
+    background-color: rgb(192, 192, 192);
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 8px);
+}
+
+.text-mess {
+    padding: 4px;
+    line-height: 25px;
+    text-align: center;
+}
+
+.send-message {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.field-send {
+    width: 100%;
+    margin: 10px;
+}
+
+.btn-send {
+    margin: 10px;
+}

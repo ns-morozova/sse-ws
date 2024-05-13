@@ -1,0 +1,30 @@
+image: Visual Studio 2019 # образ для сборки
+
+environment:
+  nodejs_version: "20"
+
+branches:
+  only:
+    - master  # ветка git
+    - main
+
+cache: node_modules  # кеширование
+
+install:
+  - npm uninstall -g npm
+  - npm install  # команда установки зависимостей
+
+build: off  # отключаем встроенную в appveyor систему сборки
+
+build_script:
+  - npm run build   # команда сборки
+
+test_script:
+  - npm run lint
+
+deploy_script:  # скрипт развёртывания
+  - git config --global credential.helper store
+  - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:GITHUB_TOKEN):x-oauth-basic@github.com`n"
+  - git config --global user.name ns-morozova
+  - git config --global user.email ns_morozova@mail.ru  
+  - npx push-dir --dir=dist --branch=gh-pages --force --verbose
